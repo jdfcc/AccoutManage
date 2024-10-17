@@ -1,0 +1,31 @@
+server:
+  port: 9986
+
+login:
+  authorization: true # 开启验证
+
+
+
+spring:
+  application:
+    name: AccountManage
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://120.55.80.133:3306/ikram_database?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    username: ikram_database
+    password: Lwyf@2024
+
+mybatis-plus:
+  type-aliases-package: com.jdfcc.entity # 别名
+
+  
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰命名转换原则
+
+logging:
+  level:
+    com.Cang: debug
+  pattern:
+    dateformat: mm:ss.SSS
+
