@@ -7,6 +7,7 @@ import com.jdfcc.accountmanage.mapper.AccountMapper;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.UUID;
 
 /**
  * @author jdfcc
@@ -22,14 +23,19 @@ public class AccountFacadeImpl implements AccountFacade {
 
 
     @Override
-    public Account showAccount(String id) {
-
-        Account account = new Account();
-        account.setId("12345");
-        account.setName("John");
-        account.setGender("Male");
+    public Account showAccount(Account account) {
+        account.setId(String.valueOf(UUID.randomUUID()));
         accountMapper.insert(account);
-        return accountMapper.selectById("12345");
-
+return  null;
     }
+
+
 }
+
+
+
+
+
+
+
+

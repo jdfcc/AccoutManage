@@ -1,9 +1,7 @@
 package com.jdfcc.accountmanage.controller;
 
 import com.jdfcc.accountmanage.eneity.Account;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
 
@@ -21,9 +19,15 @@ public interface AccountFacade {
 
     /**
      * obtain account information based on id
-     * @param id user id
      * @return account information
      */
-    @GetMapping("/act_info_get")
-    Account showAccount(@PathParam("id") String id);
+    @PostMapping("/act_info_get")
+    Account showAccount(@RequestBody Account account);
 }
+
+
+
+
+
+
+
