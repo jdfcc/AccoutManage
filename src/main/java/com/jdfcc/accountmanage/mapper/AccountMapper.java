@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.jdfcc.accountmanage.eneity.Account;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * @author jdfcc
  * @HomePage <a href="https://github.com/jdfcc">jdfcc</a>
@@ -12,4 +14,8 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface AccountMapper extends BaseMapper<Account> {
+
+
+
 }
+
